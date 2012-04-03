@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the bibliomega_frontend_blocks module.
+ */
+
+/**
+ * Implements hook_enable().
+ */
+function bibliomega_frontend_blocks_enable() {
+
+  fe_block_settings_features_revert('bibliomega_frontend_blocks');
+
+}
