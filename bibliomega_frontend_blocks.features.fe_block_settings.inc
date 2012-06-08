@@ -13,36 +13,6 @@ function bibliomega_frontend_blocks_default_fe_block_settings() {
   // bibliomega
   $theme = array();
 
-  $theme['ding_library-ding_menu'] = array(
-    'module' => 'ding_library',
-    'delta' => 'ding_menu',
-    'theme' => 'bibliomega',
-    'status' => '1',
-    'weight' => '-23',
-    'region' => 'menu',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '<none>',
-    'cache' => 4,
-    'i18n_mode' => '0',
-  );
-
-  $theme['ding_library-library_address'] = array(
-    'module' => 'ding_library',
-    'delta' => 'library_address',
-    'theme' => 'bibliomega',
-    'status' => 0,
-    'weight' => '-20',
-    'region' => '',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => 8,
-    'i18n_mode' => '0',
-  );
-
   $theme['ding_user_frontend-ding-user-loan-number'] = array(
     'module' => 'ding_user_frontend',
     'delta' => 'ding-user-loan-number',
@@ -208,24 +178,9 @@ function bibliomega_frontend_blocks_default_fe_block_settings() {
     'i18n_mode' => '0',
   );
 
-  $theme['workbench-block'] = array(
-    'module' => 'workbench',
-    'delta' => 'block',
-    'theme' => 'bibliomega',
-    'status' => '1',
-    'weight' => '-24',
-    'region' => 'footer',
-    'custom' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => -1,
-    'i18n_mode' => '0',
-  );
-
   $export['bibliomega'] = $theme;
 
-  $theme_default = variable_get('theme_default', 'garland');
+  $theme_default = variable_get('theme_default', 'bartik');
   $themes = list_themes();
   foreach ($export as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
